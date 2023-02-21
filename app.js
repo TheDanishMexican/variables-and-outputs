@@ -26,4 +26,9 @@ function subtractNumber() {
 
 function updateNumber() {
   document.querySelector("#number").textContent = number;
+
+  let message = `Tallet er nu: ${number}`;
+
+  console.log("message works");
+  document.querySelector("#message").textContent = message;
 }
