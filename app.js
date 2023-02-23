@@ -5,7 +5,6 @@ let number = 0;
 window.addEventListener("load", start);
 
 function start() {
-  console.log("start works");
   document.querySelector("#btn-increment").addEventListener("click", addNumber);
   document
     .querySelector("#btn-decrement")
@@ -13,30 +12,27 @@ function start() {
 }
 
 function addNumber() {
-  console.log("add works");
   number = number + 1;
   updateNumber();
 }
 
 function subtractNumber() {
-  console.log("subtract works");
   number = number - 1;
   updateNumber();
 }
 
 function updateNumber() {
-  document.querySelector("#number").textContent = number;
-
   let message = `Tallet er nu: ${number}`;
 
-  console.log("message works");
-  document.querySelector("#message").textContent = message;
-}
+  document.querySelector("#number").textContent = number;
 
-function moreThanTen() {
-  let numero = document.querySelector("#number");
-
-  if (numero > 10) {
-    console.log("This number is larger than 10");
+  if (number > 10) {
+    message = "Number is above 10";
+  } else if (number == 10) {
+    message = "Number is 10";
+  } else {
+    message = "number is below 10";
   }
+
+  document.querySelector("#message").textContent = message;
 }
