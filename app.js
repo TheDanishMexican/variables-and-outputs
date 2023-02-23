@@ -32,3 +32,11 @@ function updateNumber() {
   console.log("message works");
   document.querySelector("#message").textContent = message;
 }
+
+function moreThanTen() {
+  let numero = document.querySelector("#number");
+
+  if (numero > 10) {
+    console.log("This number is larger than 10");
+  }
+}
